@@ -3,7 +3,6 @@ package com.example.myapplication;
 public class ContactsInfo {
     private String contactId;
     private String displayName;
-    private String phoneNumber;
 
     public String getContactId() {
         return contactId;
@@ -21,11 +20,4 @@ public class ContactsInfo {
         this.displayName = displayName;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 }

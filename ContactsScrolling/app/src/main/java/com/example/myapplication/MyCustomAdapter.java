@@ -30,7 +30,6 @@ public class MyCustomAdapter extends ArrayAdapter {
 
     private class ViewHolder {
         TextView displayName;
-        TextView phoneNumber;
     }
 
     @Override
@@ -44,7 +43,6 @@ public class MyCustomAdapter extends ArrayAdapter {
 
             holder = new ViewHolder();
             holder.displayName = (TextView) convertView.findViewById(R.id.displayName);
-            holder.phoneNumber = (TextView) convertView.findViewById(R.id.phoneNumber);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -52,7 +50,6 @@ public class MyCustomAdapter extends ArrayAdapter {
 
         ContactsInfo contactsInfo = contactsInfoList.get(position);
         holder.displayName.setText(contactsInfo.getDisplayName());
-        holder.phoneNumber.setText(contactsInfo.getPhoneNumber());
 
         return convertView;
     }

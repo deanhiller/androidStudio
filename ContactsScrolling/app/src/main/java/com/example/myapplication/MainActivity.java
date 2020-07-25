@@ -64,21 +64,6 @@ public class MainActivity extends AppCompatActivity {
                     contactsInfo.setContactId(contactId);
                     contactsInfo.setDisplayName(displayName);
 
-                    Cursor phoneCursor = getContentResolver().query(
-                            ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                            null,
-                            ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?",
-                            new String[]{contactId},
-                            null);
-
-                    if (phoneCursor.moveToNext()) {
-                        String phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-
-                        contactsInfo.setPhoneNumber(phoneNumber);
-                    }
-
-                    phoneCursor.close();
-
                     contactsInfoList.add(contactsInfo);
                 }
             }
